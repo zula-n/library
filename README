@@ -1,0 +1,38 @@
+ //Readme.txt
+ 
+ Description: A library checkout system. 
+ A limited variety of books are added and stored in ZulasLibrary. 
+ Functions available to the customer include checking out a book or dvd,
+ searching to see if a certain title is available in the library,
+ sorting titles alphabetically for easier navigation, and also allows 
+ new book titles to be added. 
+ 
+ Summary: Item.java is the abstract class that stores the information
+ of the titles including title, author, genre, and the type of item 
+ (book or dvd). It also contains all the getters and setters for 
+ these properties of information. It also contains a boolean method
+ for checking if an item is checked out, and if not, it prompts the user 
+ to check it out.
+ 
+ Book.java extends Item and contains getInfo() which prints a preview of 
+ the desired book title. The getPages() method retrieves the number of 
+ pages for given book.
+ 
+ Dvd.java extends Item and contains getInfo() which prints a preview of 
+ the desired dvd title. The getLength() method retrieves the runtime in minutes
+ for given dvd.
+ 
+ Library.java is an interface that contains methods for searching and sorting
+ titles.
+ 
+ ZulasLibrary.java is a concrete class that implements Library.java. It adds
+ titles of books and dvds into ArrayLists. It contains a method for checking 
+ out books by first checking if the title is available and prompts the user
+ to confirm adding to cart and adds to cart. It also contains two methods for
+ binary search through the array lists books and dvds. There are two methods for 
+ selection sort for the array lists books and dvds. 
+ 
+ UnitTests.java tests for sorting, binary search, checking out a title, and
+ adding a book.
+ 
+ 
